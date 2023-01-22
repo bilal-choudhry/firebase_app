@@ -50,6 +50,7 @@ class PageControllerX extends GetxController{
     });
     return response;
   }
+  /////
 
 
 
