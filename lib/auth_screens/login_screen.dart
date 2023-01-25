@@ -1,12 +1,10 @@
-import 'package:firebase_app/page_controllerx.dart';
+import 'package:firebase_app/auth_screens/signup_screen.dart';
+import 'package:firebase_app/controller/page_controllerx.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import 'forget_password.dart';
-import 'signup_screen.dart';
+
 
 class LoginScreen extends StatelessWidget {
   var controller = Get.put(PageControllerX());
@@ -16,6 +14,7 @@ class LoginScreen extends StatelessWidget {
     Get.put(PageControllerX());
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text("Login"),
       ),
       body: Obx(() => SingleChildScrollView(

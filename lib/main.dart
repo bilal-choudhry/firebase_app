@@ -1,8 +1,10 @@
+import 'package:firebase_app/auth_screens/login_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'auth_screens/signup_screen.dart';
 import 'firebase/firebase_options.dart';
-import 'signup_screen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignupScreen(),
+      home: (FirebaseAuth.instance.currentUser==null)?SignupScreen():LoginScreen(),
     );
   }
 }
