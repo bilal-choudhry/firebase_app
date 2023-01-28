@@ -41,6 +41,11 @@ dependencies:
   get: ^4.6.5
   custom_utils: ^0.0.31
   cloud_firestore: ^4.3.1
+  location: ^4.4.0
+  permission_handler: ^10.2.0
+  geocoding: ^2.0.5
+  geolocator: ^9.0.2
+
 
 dev_dependencies:
   flutter_test:

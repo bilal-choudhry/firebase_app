@@ -43,6 +43,7 @@ class PageControllerX extends GetxController {
         .signInWithEmailAndPassword(email: email, password: password)
         .then((value) {
       response = "Success";
+      Get.offAll(ScreenHomePage());
     }).catchError((error) {
       response = error.toString();
     });
